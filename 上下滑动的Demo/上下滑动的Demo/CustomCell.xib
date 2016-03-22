@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pUg-I1-Ldr" customClass="CustomCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pUg-I1-Ldr" id="NQZ-jv-2yt">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南方中票A000022" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-RP-8WS">
+                        <rect key="frame" x="0.0" y="0.5" width="80" height="43.5"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.88366477272727262" alpha="0.02" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvR-sF-1k0" customClass="CustomScrollView">
+                        <rect key="frame" x="79" y="0.0" width="241" height="43.5"/>
+                        <color key="backgroundColor" red="0.21219223484848485" green="1" blue="1" alpha="0.059999999999999998" colorSpace="calibratedRGB"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Mnh-RP-8WS" secondAttribute="bottom" id="96H-Yt-TtT"/>
+                    <constraint firstItem="uvR-sF-1k0" firstAttribute="top" secondItem="NQZ-jv-2yt" secondAttribute="top" id="H5r-XC-FLy"/>
+                    <constraint firstAttribute="bottom" secondItem="uvR-sF-1k0" secondAttribute="bottom" id="OIS-Cb-muP"/>
+                    <constraint firstItem="Mnh-RP-8WS" firstAttribute="top" secondItem="NQZ-jv-2yt" secondAttribute="top" id="PNG-53-nbi"/>
+                    <constraint firstItem="uvR-sF-1k0" firstAttribute="leading" secondItem="Mnh-RP-8WS" secondAttribute="trailing" constant="-1" id="TpX-WL-0qm"/>
+                    <constraint firstItem="Mnh-RP-8WS" firstAttribute="leading" secondItem="NQZ-jv-2yt" secondAttribute="leading" id="kAC-jG-2BG"/>
+                    <constraint firstAttribute="trailing" secondItem="uvR-sF-1k0" secondAttribute="trailing" id="vIh-4i-SBU"/>
+                    <constraint firstItem="Mnh-RP-8WS" firstAttribute="width" secondItem="NQZ-jv-2yt" secondAttribute="width" multiplier="1:4" id="w1a-Vt-mV4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="nameLabel" destination="Mnh-RP-8WS" id="MJ7-6P-1dv"/>
+                <outlet property="rightScrollView" destination="uvR-sF-1k0" id="ysJ-Uq-a13"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="452"/>
+        </tableViewCell>
+    </objects>
+</document>
