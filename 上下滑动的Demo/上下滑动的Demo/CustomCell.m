@@ -29,6 +29,7 @@
     
 }
 
+#pragma mark - UIScrollViewDelegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     _isNotification = NO;
 }
@@ -45,7 +46,7 @@
     // 避开自己发的通知，只有手指拨动才会是自己的滚动
     if (!_isNotification) {
         // 发送通知
-        [[NSNotificationCenter defaultCenter] postNotificationName:GodCellScrollNotification object:self userInfo:@{@"x":@(scrollView.contentOffset.x)}];
+         [[NSNotificationCenter defaultCenter] postNotificationName:GodCellScrollNotification object:self userInfo:@{@"x":@(scrollView.contentOffset.x)}];
     }
     _isNotification = NO;
 }
@@ -63,6 +64,7 @@
     obj = nil;
 }
 
+#pragma mark - 点击事件
 - (void)tapAction:(UITapGestureRecognizer *)gesture {
     __weak typeof (self)mySelf = self;
     if (self.tapGesClick) {

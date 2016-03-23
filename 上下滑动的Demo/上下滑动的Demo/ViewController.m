@@ -58,7 +58,6 @@
     self.tableView.tableFooterView = [FootView footView];
     // 注册一个
     extern NSString *GodCellScrollNotification;
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollMove:) name:GodCellScrollNotification object:nil];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -71,7 +70,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark- 行数
+#pragma mark- UITableViewDelegate 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return 20;
@@ -110,6 +109,7 @@
     
 }
 
+#pragma mark-- UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     if ([scrollView isEqual:self.topScrollView]) {
